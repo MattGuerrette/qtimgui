@@ -38,7 +38,6 @@ QByteArray g_currentClipboardText;
 
 void ImGuiRenderer::initialize(WindowWrapper *window) {
     m_window.reset(window);
-    initializeOpenGLFunctions();
 
     ImGuiIO &io = ImGui::GetIO();
     for (ImGuiKey key : keyMap.values()) {

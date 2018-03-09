@@ -1,6 +1,6 @@
 #pragma once
 
-#include <QOpenGLExtraFunctions>
+#include <GL/glew.h>
 #include <QObject>
 #include <imgui.h>
 #include <memory>
@@ -21,7 +21,7 @@ public:
     virtual QPoint mapFromGlobal(const QPoint &p) const = 0;
 };
 
-class ImGuiRenderer : public QObject, QOpenGLExtraFunctions {
+class ImGuiRenderer : public QObject {
     Q_OBJECT
 public:
     void initialize(WindowWrapper *window);
